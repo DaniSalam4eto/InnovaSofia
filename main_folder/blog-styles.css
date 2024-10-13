@@ -1,0 +1,89 @@
+/* Game Box Styles */
+.game-box-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: white;
+    margin-top: 100px; /* Adjust margin to place the game box appropriately */
+}
+
+.game-box {
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    padding: 40px;
+    z-index: 5;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Ambient occlusion effect */
+    text-align: center;
+    position: relative;
+    animation: popUpBox 1s ease forwards;
+}
+
+@keyframes popUpBox {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.game-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Adds depth to the circle image */
+    margin-bottom: 20px;
+}
+
+.game-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.game-description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.play-button {
+    background-color: #28a745;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    animation: popUpButton 1s ease forwards, pulsate 2s infinite;
+}
+
+@keyframes popUpButton {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.play-button:hover {
+    background-color: #218838;
+}
