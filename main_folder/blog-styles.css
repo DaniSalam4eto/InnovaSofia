@@ -7,14 +7,11 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  background-color: #f0f2f5;
 }
 
 /* Progress Bars Section */
 .progress-bars-section {
   padding: 40px 0;
-  background-color: white;
   margin-bottom: 40px;
 }
 
@@ -41,7 +38,7 @@ body {
 
 .circle-text h2 {
   font-size: 2.5rem;
-  color: #28a745;
+  color: #7e7e7e;
   margin-bottom: 5px;
 }
 
@@ -62,7 +59,17 @@ body {
   stroke-width: 8;
 }
 
-.circle-progress {
+#circle-left .circle-progress {
+  fill: none;
+  stroke: #dc3545;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  transition: stroke-dashoffset 1s ease;
+}
+
+#circle-right .circle-progress {
   fill: none;
   stroke: #28a745;
   stroke-width: 8;
@@ -97,7 +104,7 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Blog Section - Unchanged */
+/* Blog Section */
 .main-title {
   font-size: 2.5rem;
   color: #2c3e50;
@@ -229,11 +236,9 @@ body {
   justify-content: center;
   align-items: center;
   padding: 40px 20px;
-  background-color: #f8f9fa;
 }
 
 .game-box {
-  background-color: white;
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -325,43 +330,44 @@ body {
 
 @keyframes popUpButton {
   0% {
-      transform: scale(0);
-      opacity: 0;
+    transform: scale(0);
+    opacity: 0;
   }
   100% {
-      transform: scale(1);
-      opacity: 1;
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
 @keyframes pulsate {
   0% {
-      transform: scale(1);
+    transform: scale(1);
   }
   50% {
-      transform: scale(1.05);
+    transform: scale(1.05);
   }
   100% {
-      transform: scale(1);
+    transform: scale(1);
   }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .circle-container {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .content-container {
-      padding: 15px;
+    padding: 15px;
   }
 
   .footer-container {
-      flex-direction: column;
-      text-align: center;
+    flex-direction: column;
+    text-align: center;
   }
 }
+
 .no-bg {
   background: none;
 }
@@ -378,4 +384,3 @@ body {
 .footer a:hover {
   text-decoration: underline;
 }
-
