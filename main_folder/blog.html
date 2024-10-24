@@ -6,33 +6,170 @@
     <title>Blog - Innova Sofia</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="blog-styles.css">
+    <script defer src="progress-bar.js"></script>
 </head>
 <body>
+    <!-- Circle Progress Bars Section -->
+    <section class="progress-bars-section">
+        <div class="circle-container">
+            <!-- Left Circle: Trees Planted -->
+            <div class="circle" id="circle-left">
+                <div class="circle-text">
+                    <h2 id="planted-trees-text">0</h2>
+                    <p>Посадени Дървета</p>
+                </div>
+                <svg viewBox="0 0 100 100">
+                    <circle class="circle-background" cx="50" cy="50" r="45"></circle>
+                    <circle class="circle-progress" id="progress-left" cx="50" cy="50" r="45"></circle>
+                </svg>
+            </div>
+
+            <!-- Right Circle: Goal -->
+            <div class="circle" id="circle-right">
+                <div class="circle-text">
+                    <h2 id="goal-text">1000</h2>
+                    <p>Цел</p>
+                </div>
+                <svg viewBox="0 0 100 100">
+                    <circle class="circle-background" cx="50" cy="50" r="45"></circle>
+                    <circle class="circle-progress" id="progress-right" cx="50" cy="50" r="45"></circle>
+                </svg>
+            </div>
+        </div>
+    </section>
 
     <!-- Blog Content Section -->
     <section class="content">
         <div class="content-background"></div>
         <div class="content-container">
-            <h2>Blog Title</h2>
-            <p>This is where your blog content will go. You can easily add paragraphs and images here.</p>
+            <h1 class="main-title fade-in">София - Зеленият Град на Бъдещето</h1>
+            
+            <div class="blog-section fade-in">
+                <img src="sofia-history.jpg" alt="Стара София" class="blog-image">
+                <h2>История и Развитие</h2>
+                <p>София, един от най-древните европейски градове, има история, простираща се над 7000 години. От древна Сердика до модерна столица, градът винаги е бил известен със своите минерални извори и красива природа. Днес, докато градът продължава да се развива, ние се фокусираме върху запазването на този природен баланс и създаването на още по-зелено бъдеще.</p>
+            </div>
+
+            <div class="blog-section fade-in">
+                <img src="sofia-vitoshka.jpg" alt="Витошка улица" class="blog-image">
+                <h2>Витошка - Зеленото Сърце на София</h2>
+                <p>Витошка булевард, емблематичната пешеходна зона на София, претърпя забележителна трансформация през последните години. Днес алеята е осеяна с кашпи с цветя и млади дръвчета, създаващи приятен микроклимат и чист въздух за разходка.</p>
+                <p>През 2024 година стартира нова инициатива за още по-мащабно озеленяване на булеварда, включваща:</p>
+                <ul class="fade-in">
+                    <li>Засаждане на устойчиви на градски условия дървесни видове</li>
+                    <li>Инсталиране на автоматични поливни системи</li>
+                    <li>Създаване на зелени кътове за отдих</li>
+                    <li>Монтиране на соларни пейки с USB зарядни</li>
+                </ul>
+            </div>
+
+            <div class="blog-section fade-in">
+                <img src="sofia-parks.jpg" alt="Борисова Градина" class="blog-image">
+                <h2>Парковете на София - Зелените Дробове на Града</h2>
+                <p>Борисовата градина, създадена през 1884 г., е най-старият и най-големият парк в София. В нея се намират над 100 вида дървета, някои на повече от 100 години. Заедно с Южния парк и Западния парк, те формират зеления пояс на столицата.</p>
+                <div class="park-stats fade-in">
+                    <div class="stat-box">
+                        <h3>Борисова Градина</h3>
+                        <p>Площ: 300 хектара</p>
+                        <p>Дървесни видове: 100+</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Южен Парк</h3>
+                        <p>Площ: 250 хектара</p>
+                        <p>Дървесни видове: 80+</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Западен Парк</h3>
+                        <p>Площ: 225 хектара</p>
+                        <p>Дървесни видове: 70+</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-section fade-in">
+                <img src="sofia-vitosha.jpg" alt="Витоша планина" class="blog-image">
+                <h2>Витоша - Природната Красота на София</h2>
+                <p>Витоша не е просто планина - тя е символ на София и неразделна част от градския пейзаж. Природният парк "Витоша" е вторият най-стар национален парк на Балканския полуостров и предлага:</p>
+                <ul class="fade-in">
+                    <li>Над 1500 вида растения</li>
+                    <li>Над 500 вида гъби</li>
+                    <li>Множество защитени животински видове</li>
+                    <li>Уникални геоложки феномени като Каменното море</li>
+                </ul>
+                <p class="fade-in">Ежегодно тук се провеждат мащабни залесителни акции, в които участват хиляди доброволци.</p>
+            </div>
+
+            <div class="blog-section fade-in">
+                <img src="sofia-initiatives.jpg" alt="Зелени инициативи" class="blog-image">
+                <h2>Зелени Инициативи за 2024</h2>
+                <p>София активно участва в европейските програми за устойчиво развитие. Ето някои от текущите проекти:</p>
+                <ul class="fade-in">
+                    <li>План за засаждане на 1000 нови дървета в градските райони</li>
+                    <li>Разширяване на мрежата от велоалеи с 50 км</li>
+                    <li>Създаване на нови градски градини</li>
+                    <li>Инсталиране на соларни панели в обществени сгради</li>
+                </ul>
+            </div>
+
+            <div class="blog-section fade-in">
+                <img src="sofia-future.jpg" alt="Бъдещето на София" class="blog-image">
+                <h2>Визия за Бъдещето</h2>
+                <p>До 2030 година, София си поставя следните цели:</p>
+                <div class="goals-grid fade-in">
+                    <div class="goal-box">
+                        <h3>10 000</h3>
+                        <p>нови дървета</p>
+                    </div>
+                    <div class="goal-box">
+                        <h3>100 км</h3>
+                        <p>нови велоалеи</p>
+                    </div>
+                    <div class="goal-box">
+                        <h3>50%</h3>
+                        <p>по-малко емисии</p>
+                    </div>
+                    <div class="goal-box">
+                        <h3>30</h3>
+                        <p>нови парка</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-section fade-in">
+                <h2>Как Можете да Помогнете?</h2>
+                <div class="help-options">
+                    <div class="help-box fade-in">
+                        <h3>Станете Доброволец</h3>
+                        <p>Присъединете се към нашите инициативи за засаждане на дървета и почистване на паркове.</p>
+                    </div>
+                    <div class="help-box fade-in">
+                        <h3>Дарете Дърво</h3>
+                        <p>Можете да дарите средства за засаждане на дърво във вашия квартал.</p>
+                    </div>
+                    <div class="help-box fade-in">
+                        <h3>Споделете</h3>
+                        <p>Разкажете на приятели за нашите инициативи и ги поканете да се включат.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Game Box Section -->
     <section class="game-box-section">
         <div class="game-box">
-            <img src="treegame-image.jpg" alt="Minigame" class="game-image">
-            <h3 class="game-title">Засъди дървото</h3>
-            <p class="game-description">А сега пробвай ти да посъдиш малко дървo!</p>
+            <img src="treegame-image.jpg" alt="Минигра" class="game-image">
+            <h3 class="game-title">Засади дърво</h3>
+            <p class="game-description">А сега пробвай ти да посадиш малко дърво!</p>
             <button onclick="window.location.href='minigame_tree.html'" class="play-button">ИГРАЙ</button>
         </div>
     </section>
 
-    <!-- Footer Section (Same as Front Page) -->
+    <!-- Footer Section -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-left">
-                <a href="tos.html" class="tos-link">Terms of Service</a>
+                <a href="tos.html" class="tos-link">Условия за ползване</a>
             </div>
             <div class="footer-center">
                 <img src="mainlogo.png" alt="Innova Sofia Logo" class="footer-logo">
@@ -44,5 +181,7 @@
         </div>
     </footer>
 
+    <script src="progress-bar.js"></script>
+    <script src="scroll-animations.js"></script>
 </body>
 </html>
