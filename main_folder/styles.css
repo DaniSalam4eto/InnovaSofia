@@ -295,3 +295,87 @@ strong {
 .animated-number {
     animation: countUp 0.5s ease forwards;
 }
+
+.roadmap-container {
+    max-width: 1200px;
+    margin-top: 1500px ;
+}
+
+.roadmap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-width: max-content;
+    position: relative;
+}
+.roadmap::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #e0e0e0;
+    z-index: -1;
+}
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    margin: 0 20px;
+    opacity: 0;
+    transform: translateX(50px);
+}
+.step-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #aaffd0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.step-icon_false {
+    width: 60px;
+    height: 60px;
+    background-color: #ffbbaa;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.step-icon img {
+    width: 30px; 
+    height: 30px;
+}
+
+.step-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.step-description {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+}
+
+/* Scroll Animation */
+@keyframes fadeInSlide {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive for Smaller Screens */
+@media (max-width: 768px) {
+    .step {
+        width: 150px;
+        margin: 0 10px;
+    }
+}

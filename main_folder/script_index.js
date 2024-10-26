@@ -35,4 +35,33 @@ document.addEventListener('DOMContentLoaded', function() {
             counter.textContent = Math.floor(current);
         }
     }, duration / steps);
+
+    window.addEventListener('scroll', function() {
+        const steps = document.querySelectorAll('.step');
+        steps.forEach(step => {
+            const rect = step.getBoundingClientRect();
+            if (rect.top < window.innerHeight) {
+                step.style.animation = `fadeInSlide 0.5s ease forwards ${step.style.animationDelay}`;
+            }
+        });
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+        const roadmapSection = document.querySelector('.roadmap-container');
+        const steps = document.querySelectorAll('.step');
+    
+      
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    steps.forEach((step, index) => {
+                        step.style.animation = `fadeInSlide 0.5s ease forwards ${index * 0.2}s`;
+                    });
+                    observer.unobserve(roadmapSection);
+                }
+            });
+        }, { threshold: 0.1 });
+    
+        observer.observe(roadmapSection);
+    });
+    
 });

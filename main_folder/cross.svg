@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+	<title>checkmark-svg</title>
+	<defs>
+		<image width="42" height="42" id="img1" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KDTwhLS0gVXBsb2FkZWQgdG86IFNWRyBSZXBvLCB3d3cuc3ZncmVwby5jb20sIEdlbmVyYXRvcjogU1ZHIFJlcG8gTWl4ZXIgVG9vbHMgLS0+Cjxzdmcgd2lkdGg9IjgwMHB4IiBoZWlnaHQ9IjgwMHB4IiB2aWV3Qm94PSIwIDAgMjEgMjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cg08ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZT0iIzAwMDAwMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyIDIpIj4KDTxjaXJjbGUgY3g9IjguNSIgY3k9IjguNSIgcj0iOCIvPgoNPGcgdHJhbnNmb3JtPSJtYXRyaXgoMCAxIC0xIDAgMTcgMCkiPgoNPHBhdGggZD0ibTUuNSAxMS41IDYtNiIvPgoNPHBhdGggZD0ibTUuNSA1LjUgNiA2Ii8+Cg08L2c+Cg08L2c+Cg08L3N2Zz4="/>
+	</defs>
+	<style>
+	</style>
+	<use id="cross-circle-svgrepo-com" href="#img1" transform="matrix(.714,0,0,.714,-2.5,-3)"/>
+</svg>
