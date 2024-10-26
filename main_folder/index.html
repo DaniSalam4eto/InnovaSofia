@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Innova Sofia</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -23,8 +24,34 @@
     <section class="content">
         <div class="content-background"></div>
         <div class="content-container">
-            <h2>Our Mission</h2>
-            <p>We aim to bring forward-thinking solutions to make Sofia a smarter and more sustainable city. By engaging students, entrepreneurs, and the tech community, we create a better urban experience for everyone.</p>
+            <a href="blog.html">
+                <div class="progress-box">
+                    <h1 class="progress-title">Дървета за По-Добра София</h1>
+                    <div class="circle-container">
+                        <div id="circle-left" class="circle">
+                            <div class="circle-text">
+                                <h2 id="planted-trees-text">0</h2>
+                                <p>Посадени Дървета</p>
+                            </div>
+                            <svg viewbox="0 0 100 100">
+                                <circle class="circle-background" cx="50" cy="50" r="45"></circle>
+                                <circle class="circle-progress" cx="50" cy="50" r="45"></circle>
+                            </svg>
+                        </div>
+
+                        <div id="circle-right" class="circle">
+                            <div class="circle-text">
+                                <h2 id="goal-text">1000</h2>
+                                <p>Цел</p>
+                            </div>
+                            <svg viewbox="0 0 100 100">
+                                <circle class="circle-background" cx="50" cy="50" r="45"></circle>
+                                <circle class="circle-progress" cx="50" cy="50" r="45"></circle>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </a>
         </div>
     </section>
 
@@ -44,5 +71,6 @@
         </div>
     </footer>
 
+    <script src="script_index.js"></script>
 </body>
 </html>
