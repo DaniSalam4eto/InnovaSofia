@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <title>Игра за Сортиране на Рециклиране</title>
+    <link rel="stylesheet" href="style_game2.css">
+    <link rel="icon" type="image/png" href="mainlogo.png">
+</head>
+<body>
+    <a href="recycling.html" id="backToBlogs">
+        <img src="arrow.png" alt="Назад към блоговете" id="backArrow">
+    </a>
+
+    <div id="gameContainer">
+        <div id="trashCans">
+            <button id="paperRecycling" class="trash-can" data-type="paper">
+                <img src="paper_can.svg" alt="Рециклиране на Хартия">
+            </button>
+            <button id="plasticRecycling" class="trash-can" data-type="plastic">
+                <img src="plastic_can.svg" alt="Рециклиране на Пластмаса">
+            </button>
+            <button id="metalRecycling" class="trash-can" data-type="metal">
+                <img src="metal_can.svg" alt="Рециклиране на Метал">
+            </button>
+            <button id="nonRecyclableTrash" class="trash-can" data-type="nonRecyclable">
+                <img src="nonrecyclable_can.svg" alt="Нерециклируем Боклук">
+            </button>
+        </div>
+    </div>
+
+    <div id="timer">Оставащо време: 1:00</div>
+    <div id="score">Точки: 0</div>
+
+    <button id="tutorialButton">❓</button>
+
+    <div id="tutorialPopup" class="tutorial-popup visible">
+        <div class="tutorial-content">
+            <h2>Как се играе Играта за Рециклиране</h2>
+            
+            <p>🌍 Добре дошли в играта за рециклиране!</p>
+            
+            <h3>Правила:</h3>
+            <ul>
+                🧴 Целта е да сортирате колкото се може повече отпадъци в правилния кош за рециклиране</li>
+                ⏱️ Имате 1 минута да съберете 15 точки</li>
+                🎯 Влачете емотиконите към съответния цветен кош</li>
+            </ul>
+
+            <h3>Какво трябва да правите:</h3>
+            <p>✅ Хартия → Кошче за хартия</p>
+            <p>✅ Пластмаса → Кошче за пластмаса</p>
+            <p>✅ Метал → Кошче за метал</p>
+            <p>❌ Нерециклируеми отпадъци → Кошче за нерециклируеми</p>
+
+            <p>⚠️ Внимание! Сложите отпадъка в ГРЕШНИЯ кош и играта приключва!</p>
+
+            <button id="closeTutorial">Започни игра</button>
+        </div>
+    </div>
+
+    <div id="winMessage">
+        <h1>Поздравления! Победихте!</h1>
+        <button id="restartGameWin" onclick="restartGame()">Играй отново</button>
+    </div>
+
+    <div id="loseMessage">
+        <h1>Играта приключи!</h1>
+        <button id="restartGameLose" onclick="restartGame()">Опитайте отново</button>
+    </div>
+
+    <script src="script_game2.js"></script>
+</body>
+</html>

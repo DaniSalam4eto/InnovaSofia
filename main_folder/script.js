@@ -3,10 +3,10 @@ let currentStage = 0;
 let wateringDelay = false;
 let maxEnemies = 5;
 let enemyCount = 0;
-let gamePaused = true; // Start with the game paused
+let gamePaused = true; 
 
 document.addEventListener('DOMContentLoaded', function() {
-    showTutorial(); // Show tutorial on game load
+    showTutorial(); 
 });
 
 function showTutorial() {
@@ -20,7 +20,7 @@ function hideTutorial() {
 }
 
 document.getElementById('waterButton').addEventListener('click', function() {
-    if (gamePaused) return; // Don't allow watering if game is paused
+    if (gamePaused) return; 
     if (currentStage < treeStages.length - 1 && !wateringDelay) {
         currentStage++;
         document.getElementById('tree').textContent = treeStages[currentStage];
@@ -29,28 +29,28 @@ document.getElementById('waterButton').addEventListener('click', function() {
         setTimeout(() => {
             wateringDelay = false;
             document.getElementById('waterButton').disabled = false;
-        }, 8000); // 8-second delay
+        }, 8000); 
     }
     if (currentStage === treeStages.length - 1) {
         showWinScreen();
     }
 });
 
-// Tutorial Button and Close Button
+
 document.getElementById('tutorialButton').addEventListener('click', showTutorial);
 document.getElementById('closeTutorial').addEventListener('click', hideTutorial);
 
-// Random Enemy Spawn and Movement Logic
+
 function spawnEnemy() {
     if (enemyCount >= maxEnemies || gamePaused) return;
 
     let enemy = document.createElement('div');
-    enemy.textContent = Math.random() > 0.5 ? "👤" : "🗑️"; // Human or Trash enemies
+    enemy.textContent = Math.random() > 0.5 ? "👤" : "🗑️"; 
     enemy.style.position = "absolute";
     enemy.style.fontSize = "2rem";
     enemy.style.cursor = "pointer";
 
-    // Random spawn near the tree (but not too close, far enough for path to form)
+  
     let randomX = Math.random() > 0.5 ? (Math.random() * 200 + 100) : -(Math.random() * 200 + 100);
     let randomY = Math.random() > 0.5 ? (Math.random() * 200 + 100) : -(Math.random() * 200 + 100);
     enemy.style.left = `calc(50% + ${randomX}px)`;
@@ -58,10 +58,10 @@ function spawnEnemy() {
 
     document.body.appendChild(enemy);
 
-    // Move enemy to tree
+  
     let treeElement = document.getElementById('tree');
     let moveInterval = setInterval(function() {
-        if (gamePaused) return; // Stop movement if game is paused
+        if (gamePaused) return; 
 
         let enemyRect = enemy.getBoundingClientRect();
         let treeRect = treeElement.getBoundingClientRect();
@@ -81,9 +81,9 @@ function spawnEnemy() {
         enemy.style.top = `${enemyRect.top + (dy / distance) * moveSpeed}px`;
     }, 20);
 
-    // Enemy click to destroy
+  
     enemy.addEventListener('click', function() {
-        if (gamePaused) return; // Don't allow clicking if game is paused
+        if (gamePaused) return; 
         clearInterval(moveInterval);
         document.body.removeChild(enemy);
         enemyCount--;
@@ -102,19 +102,19 @@ function showWinScreen() {
     document.getElementById('winMessage').style.display = 'block';
 }
 
-// Spawn enemies at intervals
+
 setInterval(() => {
     if (enemyCount < maxEnemies && !gamePaused) {
         spawnEnemy();
     }
 }, 3000);
 
-// Play Again button
+
 document.getElementById('playAgainButton').addEventListener('click', function() {
     window.location.reload();
 });
 
-// Go to Blog buttons
+
 document.getElementById('goToBlogButton').addEventListener('click', function() {
     window.location.href = 'blog.html';
 });
@@ -123,12 +123,12 @@ document.getElementById('goToBlogButtonWin').addEventListener('click', function(
     window.location.href = 'blog.html';
 });
 
-// Game loop
+
 function gameLoop() {
     if (!gamePaused) {
-        // Update game state here if needed
+      
     }
     requestAnimationFrame(gameLoop);
 }
 
-gameLoop(); // Start the game loop
+gameLoop(); 

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дървета в София</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog-styles.css">
+    <script defer src="progress-bar.js"></script>
+</head>
+<body>
+    <a href="index.html" id="backToBlogs">
+        <img src="arrow.png" alt="Back to Blogs" id="backArrow">
+    </a>
+    <!-- Circle Progress Bars Section -->
+    <section class="progress-bars-section">
+        <div class="circle-container">
+            <div class="circle" id="circle-left">
+                <div class="circle-text">
+                    <h2 id="planted-trees-text">0</h2>
+                    <p>Посадени Дървета</p>
+                </div>
+                <svg viewBox="0 0 100 100">
+                    <circle class="circle-background" cx="50" cy="50" r="45"></circle>
+                    <circle class="circle-progress" id="progress-left" cx="50" cy="50" r="45"></circle>
+                </svg>
+            </div>
+
+            <div class="circle" id="circle-right">
+                <div class="circle-text">
+                    <h2 id="goal-text">1000</h2>
+                    <p>Цел</p>
+                </div>
+                <svg viewBox="0 0 100 100">
+                    <circle class="circle-background" cx="50" cy="50" r="45"></circle>
+                    <circle class="circle-progress" id="progress-right" cx="50" cy="50" r="45"></circle>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="content-background"></div>
+        <div class="content-container">
+            <h1 class="main-title fade-in">Дървета за По-Добра София</h1>
+            
+            <div class="blog-section fade-in">
+                <img src="planting-tree2.jpg" alt="Tree 1" class="blog-image">
+                <h2>Нашите Дървета</h2>
+                <p>В София имаме невероятно разнообразие от дървета. От вековните дъбове в Борисовата градина до младите фиданки по улиците, всяко дърво допринася за по-чист въздух и по-красив град.</p>
+            </div>
+
+            <div class="blog-section fade-in">
+                <img src="planting-tree.jpg" alt="Tree 2" class="blog-image">
+                <h2>Нови Дървета за Витошка</h2>
+                <p>През 2024 година започваме масово засаждане на нови дървета по Витошка. Всяко ново дърво ще бъде внимателно подбрано да издържа на градски условия.</p>
+                <ul class="fade-in">
+                    <li>Дървета, устойчиви на градска среда</li>
+                    <li>Автоматични системи за поливане</li>
+                    <li>Специални защити за младите дървета</li>
+                </ul>
+            </div>
+
+            <div class="blog-section fade-in">
+                <h2>Бъдещи Подобрения</h2>
+                <div class="goals-grid fade-in">
+                    <div class="goal-box">
+                        <h3>1000</h3>
+                        <p>нови дървета до края на годината</p>
+                    </div>
+                    <div class="goal-box">
+                        <h3>5000</h3>
+                        <p>нови дървета до 2025</p>
+                    </div>
+                    <div class="goal-box">
+                        <h3>10000</h3>
+                        <p>нови дървета до 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-section fade-in">
+                <h2>Как Можете да Помогнете?</h2>
+                <div class="help-options">
+                    <div class="help-box fade-in">
+                        <h3>Засади Дърво</h3>
+                        <p>Включете се в инициативи за засаждане на дървета.</p>
+                    </div>
+                    <div class="help-box fade-in">
+                        <h3>Грижи се за Дърво</h3>
+                        <p>Помогнете в грижата за младите дръвчета във вашия квартал.</p>
+                    </div>
+                    <div class="help-box fade-in">
+                        <h3>Разкажи на Други</h3>
+                        <p>Сподели с приятели за важността на дърветата в града.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="game-box-section">
+        <div class="game-box">
+            <img src="treegame-image.jpg" alt="Минигра" class="game-image">
+            <h3 class="game-title">Засади дърво</h3>
+            <p class="game-description">Опитай да засадиш виртуално дърво!</p>
+            <button onclick="window.location.href='treesgame.html'" class="play-button">ИГРАЙ</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <a href="tos.html" class="tos-link">Terms of Service</a>
+            </div>
+            <div class="footer-center">
+                <img src="mainlogo.png" alt="Innova Sofia Logo" class="footer-logo">
+                <img src="competition-logo.png" alt="Ученически Хакатон Logo" class="footer-logo">
+            </div>
+            <div class="footer-right">
+                <a href="https://sofia2024.advancewebcup.com" target="_blank" class="footer-link">Ученически Хакатон</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="progress-bar.js"></script>
+    <script src="scroll-animations.js"></script>
+</body>
+</html>

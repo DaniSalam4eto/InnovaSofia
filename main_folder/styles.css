@@ -81,13 +81,6 @@ body {
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
 }
 
-.content {
-    background-color: white;
-    padding: 100px 50px;
-    position: relative;
-    z-index: 1;
-    min-height: 200vh;
-}
 
 .content-background {
     position: fixed;
@@ -103,7 +96,8 @@ body {
     background-size: 50px 50px;
 }
 
-/* Footer styles */
+
+
 .footer {
     background-color: #333;
     color: white;
@@ -113,7 +107,7 @@ body {
     align-items: center;
     text-align: center;
     position: relative;
-    z-index: 2; /* Ensures it's in front of the grid */
+    z-index: 2; 
 }
 
 .footer-container {
@@ -159,7 +153,6 @@ body {
 .footer-right a:hover {
     color: #ddd;
 }
-/* Additional styles for TOS page */
 .tos-container {
     padding: 100px 50px;
     background-color: white;
@@ -167,7 +160,7 @@ body {
     margin: 0 auto;
     color: #333;
 }
-
+   
 .tos-title {
     font-size: 3rem;
     font-weight: bold;
@@ -191,18 +184,6 @@ p {
 strong {
     font-weight: bold;
     color: #555;
-}
-.progress-box {
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    width: 600px;
-    margin: 20px auto;
-    transform: translateY(20px);
-    opacity: 0;
-    animation: fadeInUp 0.8s ease forwards;
-    font-family: 'Poppins', sans-serif;
 }
 
 .progress-title {
@@ -297,13 +278,17 @@ strong {
 }
 
 .roadmap-container {
+    margin-top: 200px;
     max-width: 1200px;
-    margin-top: 1500px ;
+    margin: auto; /* Centers horizontally */
+    margin-top: 50px; /* Adjust as needed */
+    display: flex;
+    justify-content: center; /* Centers the roadmap inside the container */
 }
 
 .roadmap {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center; /* Centers steps in the roadmap */
     align-items: flex-start;
     min-width: max-content;
     position: relative;
@@ -318,6 +303,7 @@ strong {
     background-color: #e0e0e0;
     z-index: -1;
 }
+
 .step {
     display: flex;
     flex-direction: column;
@@ -327,26 +313,25 @@ strong {
     opacity: 0;
     transform: translateX(50px);
 }
+
+.step-icon, .step-icon_false {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
 .step-icon {
-    width: 60px;
-    height: 60px;
     background-color: #aaffd0;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 15px;
 }
+
 .step-icon_false {
-    width: 60px;
-    height: 60px;
     background-color: #ffbbaa;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 15px;
 }
+
 .step-icon img {
     width: 30px; 
     height: 30px;
@@ -358,13 +343,14 @@ strong {
     margin-bottom: 5px;
     text-align: center;
 }
+
 .step-description {
     font-size: 0.9rem;
     color: #666;
     text-align: center;
 }
 
-/* Scroll Animation */
+
 @keyframes fadeInSlide {
     to {
         opacity: 1;
@@ -372,10 +358,144 @@ strong {
     }
 }
 
-/* Responsive for Smaller Screens */
+
 @media (max-width: 768px) {
     .step {
         width: 150px;
         margin: 0 10px;
     }
 }
+.about-us-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 200px; /* Moves the section 600px down */
+    background: none; /* Ensures no background color */
+}
+
+.about-us-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px; /* Adjust overall section width */
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 230px; /* Increased space between image and text */
+}
+
+.about-us-image {
+    z-index: 8;
+    width: 400px;
+    height: 280px;
+    border-radius: 15px;
+    animation: scaleUp 0.8s ease-in-out;
+}
+
+.about-us-text {
+    max-width: 500px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.about-us-text h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.about-us-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+
+
+.progress-box {
+    z-index: 9;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 600px;
+    margin: 20px auto;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+    font-family: 'Poppins', sans-serif;
+    cursor: default;
+}
+
+.progress-title {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.goal-box {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.goal-box:hover {
+    transform: translateY(-5px);
+}
+
+.goal-box h3 {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.goal-box p {
+    color: #666;
+    font-size: 1rem;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .progress-box {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .goals-grid {
+        grid-template-columns: 1fr;
+    }
+}
+#backToBlogs {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+  }
+  #backArrow {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+  }

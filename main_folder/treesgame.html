@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Засадете дърво</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="mainlogo.png">
+</head>
+<body>
+    <a href="trees.html" id="backToBlogs">
+        <img src="arrow.png" alt="Back to Blogs" id="backArrow">
+    </a>
+    <h1 id="gameTitle">Засадете дърво!</h1>
+    <div id="tree">🌱</div>
+    <button id="waterButton">💧Полейте растението</button>
+    <button id="tutorialButton">❓</button>
+
+    <div id="tutorialPopup" class="tutorial-popup">
+        <div class="tutorial-content">
+            <h2>Как да отгледате дърво</h2>
+            <p>🌱 Започнете, като поливате растението с помощта на бутона за поливане под дървото.</p>
+            <p>🌿 Докато растението расте, защитете го от враговете (👤 хора и 🗑️ боклук).</p>
+            <p>💧 Бутонът за поливане има 8-секундна забавяне между употребите.</p>
+            <p>🖱️ Кликнете върху враговете, за да предотвратите достигането им до вашето дърво!</p>
+            <p>🚫 Ако някой враг достигне дървото, играта е загубена.</p>
+            
+            <button id="closeTutorial">Затвори</button>
+        </div>
+    </div>
+
+    <div id="winMessage" class="paused">
+        <h1>Поздравления! Отгледахте дърво!</h1>
+        <button onclick="window.location.href='blog.html'">Върнете се към блога</button>
+    </div>
+
+    <div id="loseMessage" class="paused">
+        <h1>Губите! Дървото беше унищожено.</h1>
+        <button onclick="location.reload()">Играй отново</button>
+        <button onclick="window.location.href='blog.html'">Върнете се към блога</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
